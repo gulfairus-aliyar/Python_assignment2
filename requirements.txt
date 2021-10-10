@@ -16,3 +16,7 @@ We used requests to get the page from the Cryptocurrency server, but now we need
 
 This soup object defines a bunch of methods — many of which can achieve the same result — that we can use to extract data from the HTML. 
 
+Lxml
+lxml is a Python library which allows for easy handling of XML and HTML files, and can also be used for web scraping.
+    $ pip install lxml
+
