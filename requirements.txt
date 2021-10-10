@@ -1,1 +1,18 @@
+Making web requests
+
+With Python's requests (pip install requests) library we're getting a web page by using get() on the URL. The response r contains many things, but using r.content will give us the HTML. Once we have the HTML we can then parse it for the data we're interested in analyzing.
+    
+    import requests
+    url = 'https://www.coingecko.com/en'
+    r = requests.get(url)
+    print(r.content[:100])    
+
+Parsing HTML with BeautifulSoup
+
+We used requests to get the page from the Cryptocurrency server, but now we need the BeautifulSoup library (pip install beautifulsoup4) to parse HTML and XML. When we pass our HTML to the BeautifulSoup constructor we get an object in return that we can then navigate like the original tree structure of the DOM.
+
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(r.content, 'html.parser')
+
+This soup object defines a bunch of methods — many of which can achieve the same result — that we can use to extract data from the HTML. 
 
