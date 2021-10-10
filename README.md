@@ -9,6 +9,10 @@ ___BeautifulSoup___
 
     pip install beautifulsoup4
 
+___LXML___
+
+    pip install lxml
+
 ## Usage
     import requests  
     from bs4 import BeautifulSoup 
